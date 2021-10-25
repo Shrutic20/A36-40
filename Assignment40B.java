@@ -1,0 +1,47 @@
+import java.util.*;
+
+class pattern
+{
+	public void display(int row,int column)
+	{
+		
+		for(int i=1;i<=row;i++)
+		{
+			
+			for(int j=column;j>0;j--)
+			{
+				if(i==j)
+				{
+					System.out.print("#\t");
+					
+				}
+				else if(i<j)
+				{
+					System.out.print("*\t");
+				}
+				else{
+					System.out.print("@\t");
+				}
+			}
+			System.out.print("\n");
+		}
+	}
+}
+
+class Assignment40B
+{
+	public static void main(String args[])
+	{
+		int iRow=0, iCol=0;
+		Scanner sobj = new Scanner(System.in);
+		
+		System.out.println("Enter number of rows : ");
+		iRow=sobj.nextInt();
+		
+		System.out.println("Enter number of columns : ");
+		iCol=sobj.nextInt();
+		
+		pattern p = new pattern();
+		p.display(iRow,iCol);
+	}
+}
